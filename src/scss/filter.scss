@@ -1,0 +1,78 @@
+@import "./config";
+.select-search-select{
+    width: 300px !important;
+    // .select-search-options 
+    .select-search-row{
+        font-size: 9px !important;
+    }
+}
+.select-options {
+    flex-direction: column;
+    margin: 30px;
+    width: 100%;
+
+    .date-picker-outlet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // border: 2px solid red;
+
+        .date-picker {
+            border: 1px solid $date-picker-border;
+            height: 50px;
+        }
+    }
+
+    .date-picker-outlet-sm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        // border: 2px solid green;
+
+        .date-picker {
+            width: 300px;
+            border: 1px solid $date-picker-border;
+            height: 50px;
+        }
+    }
+
+    .btn-search-view {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px;
+
+        .btn-search {
+            width: 100px;
+            height: 40px;
+            border: 1px solid $btn-search;
+            background-color: $btn-search;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 5px;
+
+            &:hover {
+                background-color: $btn-search-hover;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:900px) {
+    .date-picker-outlet-sm {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .date-picker-outlet {
+        display: none !important;
+    }
+    .date-picker-outlet-sm{
+        .select-search{
+            margin-left: -12%;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import "./config";
+.show-error-report{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    // border:1px solid $primary-color;
+    width: 100%;
+    height: 500px;
+    p{
+        color: $danger-color;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Poppins";
+    }
+}

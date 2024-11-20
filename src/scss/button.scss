@@ -1,0 +1,22 @@
+@import "./config";
+
+.btn-search-view {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+
+    .btn-search {
+        width: 120px;
+        height: 50px;
+        border: 1px solid $btn-search;
+        background-color: $btn-search;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin-right: 5px;
+
+        &:hover {
+            background-color: $btn-search-hover;
+        }
+    }
+}

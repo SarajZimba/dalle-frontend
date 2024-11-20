@@ -1,0 +1,130 @@
+@import "../config";
+.handle-date{
+    width: 80px !important;
+}
+.btn-search-style {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+@media screen and (min-width:769px) {
+    .handle-date-input-btn {
+        display: flex;
+        justify-content: space-around;
+        background-color: $bg-filter;
+        align-items: center;
+        padding: 20px 25px;
+    }
+
+    .handle-date-input-btn-sm {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .handle-date-input-btn {
+        display: none !important;
+    }
+
+    .handle-date-input-btn-sm {
+        margin: 0px 05px;
+        padding: 20px;
+    }
+}
+.table-customer{
+    text-align: center;
+}
+.customer-complimentary-history {
+    display: flex;
+
+    .table-customer-history {
+        margin: 15px 5px;
+        
+        .table-history-responsive {
+            height: 600px;
+            overflow-x: auto;
+            text-align: center;
+
+            .table-customer, .table-complementary {
+
+                td,
+                th {
+                    border: 1px solid black;
+                }
+            }
+            .table-complementary{
+                font-family: 'Source Sans Pro';
+            }
+            .table-complementary thead {
+                .position-sticky {
+                    position: sticky;
+                    top: 0;
+                    background-color: $btn-search;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+.customer-history {
+    display: flex;
+    flex-direction: column;
+    h6{
+        text-align: center;
+    }
+    .table-history-responsive {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        td,
+        th {
+            border: 1px solid black;
+        }
+    }
+}
+
+.table-customer thead {
+    .position-sticky {
+        position: sticky;
+        top: 0;
+        background-color: $btn-seen;
+        color: $secondary-color;
+    }
+}
+.bg-history{
+    background-color: rgb(238,239,243);
+    min-height: 90vh !important;
+    h5{
+        text-align: center;
+    }
+
+}
+
+.btn-show {
+    width: 100px;
+    height: 40px;
+    border: 1px solid $btn-search;
+    background-color: $btn-search;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+
+    &:hover {
+        background-color: $btn-search-hover;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .customer-complimentary-history {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .handle-date-input-btn {
+        display: flex;
+        flex-direction: column;
+    }
+}

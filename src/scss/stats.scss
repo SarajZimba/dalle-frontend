@@ -1,0 +1,130 @@
+@import "./config";
+
+// @media screen and (max-width: 1000px){
+//     .rs-anim-fade.rs-anim-in{
+//         left: 900px !important;
+//     }
+// }
+.select-search-select {
+    z-index: 10 !important
+}
+
+.filter-margin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+}
+
+.select-search-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 10px;
+}
+
+.date-range-picker-margin {
+    margin: 20px 0px;
+}
+
+
+.selected-options {
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    gap: 25px;
+    margin: 10px 05px;
+
+    .filtered {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .range-type,
+    .selected-outlet-type {
+        background-color: $btn-selected;
+        color: $secondary-color;
+        text-transform: uppercase;
+        text-align: center;
+        height: auto;
+        width: auto;
+        padding: 7px 15px;
+        margin-right: 3px;
+        border-radius: 5px;
+    }
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .select-heading {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.bg-stats {
+    min-height: 60vh !important;
+}
+.line-chart-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 20px;
+
+    .line-chart {
+        background-color: $bg-filter;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .line-chart {
+        width: 850px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:540px){
+    .line-chart {
+        width: 550px !important;
+        height: 400px !important;
+    }
+}
+@media screen and (max-width:541px) and (min-width:428px){
+    .line-chart {
+        width: 400px !important;
+        height: 300px !important;
+    }
+}
+@media screen and (max-width:427px) and (min-width:320px){
+    .line-chart {
+        width: 350px !important;
+        height: 300px !important;
+    }
+}
+.start-end-date {
+    display: flex;
+}
+
+//less than 700px 
+
+@media screen and (max-width:700px) {
+    .filter-sideways .selected-options {
+        gap: 10px !important;
+    }
+
+    .range-type,
+    .selected-outlet-type {
+        padding: 5px 10px !important;
+    }
+}
+
+@media screen and (max-width:458px) {
+    .filter-sideways .selected-options {
+        flex-direction: column !important;
+        align-items: start !important;
+    }
+}

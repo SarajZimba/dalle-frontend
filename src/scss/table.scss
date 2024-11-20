@@ -1,0 +1,443 @@
+@import "./config";
+
+.outlet-name {
+    font-family: "Open Sans";
+}
+.select-search-container {
+    background-color: white !important;
+    color: black;
+
+    .select-search-input {
+        background-color: white !important;
+        color: black;
+    }
+}
+.info-side-bar {
+    display: flex;
+
+    .info-report-container {
+        flex: 5;
+        margin: 3px 20px;
+    }
+
+    .info-bar-report {
+        flex: 1;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+
+        .information-report {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 15px 20px;
+
+            .report-info {
+                display: flex;
+                justify-content: space-between;
+                height: auto;
+                font-size: 20px;
+                border-bottom: 1px solid grey;
+            }
+
+            .report-info-two {
+                span {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .info-bar-report {
+        flex: 2 !important;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .info-bar-report {
+        flex: 3 !important;
+    }
+}
+
+@media screen and (min-width:466px) {
+    .information-report-responsive {
+        display: none !important;
+    }
+
+
+}
+
+@media screen and (max-width:466px) {
+    .info-bar-report {
+        display: none !important;
+    }
+
+    .information-report-responsive {
+        .report-flex {
+            .report-info {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            label {
+                font-family: "Poppins";
+                font-weight: 500;
+            }
+
+            .report-info-two {
+                float: right;
+
+                span {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.btn-bar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $table-num;
+    color: white;
+}
+
+.prep-time-green {
+    color: rgb(6, 179, 6);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.prep-time-red {
+    color: rgb(219, 27, 27);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.control-dates {
+    margin: 20px 0px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid blue;
+    height: auto;
+    .control-dates-width{
+        width: 90%;
+    }
+    // .control-dates-flex {
+    //     display: flex;
+    //     justify-content: space-between;
+
+    //     label {
+    //         font-size: 20px;
+    //         font-weight: 500;
+    //     }
+    // }
+
+    // .date-picker {
+    //     display: flex;
+    //     margin-left: 10px;
+    // }
+
+    // .input-style {
+    //     width: 300px !important;
+    // }
+
+    // .datepicker-style,
+    // .select-search-input {
+    //     height: 45px;
+    //     outline: none;
+    //     border: none;
+    //     padding: 0px 15px;
+    //     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    // }
+
+    .btn-report {
+        width: 60px;
+        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        .btn-generate-report {
+            height: calc(100% - 20px);
+            width: calc(100% - 10px);
+            border: 1px solid $table-num;
+            background-color: $table-num;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 5px;
+
+            &:hover {
+                background-color: $card-header;
+            }
+        }
+
+    }
+}
+
+
+
+.report {
+    margin-top: 50px;
+
+    .show-outlet-name {
+        text-align: center;
+        margin: 10px 05px;
+    }
+}
+
+.information {
+    margin-top: 10px;
+}
+
+.show-table-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .show-table-num {
+        border-radius: 45%;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin-bottom: -30px;
+        background-color: $table-num;
+
+        p {
+            font-weight: 500;
+            color: $secondary-color;
+            padding: 5px;
+        }
+    }
+
+    .show-table-kot {
+        border-radius: 45%;
+        width: 100px;
+        height: 35px;
+        text-align: center;
+        margin-bottom: -30px;
+        background-color: $table-num;
+
+        p {
+            font-weight: 500;
+            color: $secondary-color;
+            padding: 5px;
+        }
+    }
+
+    .show-table {
+        width: auto;
+
+        .show-table-emp {
+            border-radius: 45%;
+            width: calc(100% - 10px);
+            height: auto;
+            text-align: center;
+            margin-bottom: -30px;
+            background-color: $table-num;
+
+            p {
+                font-weight: 500;
+                color: $secondary-color;
+                padding: 5px;
+            }
+        }
+    }
+
+}
+
+.information {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 05px;
+    }
+
+    tr:nth-of-type(odd) {
+        background: $secondary-color;
+    }
+
+    th {
+        background: $card-header;
+        color: $secondary-color;
+        font-weight: bold;
+    }
+
+    td,
+    th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        // text-align: center;
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .control-dates {
+        margin: 20px 0px;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border: 1px solid black;
+        height: auto;
+    }
+
+    .date-picker {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .show-table-info {
+        display: none;
+    }
+
+    .show-info {
+        display: flex;
+        flex-direction: column;
+
+        .show-info-num,
+        .show-info-kot,
+        .show-info-emp {
+            background-color: $table-num;
+
+            p {
+                color: $secondary-color;
+            }
+
+            span {
+                padding-left: 05px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 460px) {
+    .show-info {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .control-dates {
+        .control-dates-flex {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width: 1190px) {
+    .control-dates {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    .control-dates {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+
+        .datepicker-style,
+        .select-search-input,
+        .input-style {
+            width: calc(100% - 40px) !important;
+        }
+    }
+
+    .report-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Force table to not be like tables anymore */
+    .information {
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            border: 1px solid #ccc;
+            margin: 20px 0px;
+        }
+
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 70%;
+        }
+
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        td:nth-of-type(1):before {
+            content: "S.No";
+        }
+
+        td:nth-of-type(2):before {
+            content: "Quantity";
+        }
+
+        td:nth-of-type(3):before {
+            content: "Item Name";
+        }
+
+        td:nth-of-type(4):before {
+            content: "Ordered at";
+        }
+
+        td:nth-of-type(5):before {
+            content: "Completed at";
+        }
+
+        td:nth-of-type(6):before {
+            content: "Total Time";
+        }
+
+        td:nth-of-type(7):before {
+            content: "Average Prepared Time";
+        }
+
+        td:nth-of-type(8):before {
+            content: "Prepared Time Difference";
+        }
+    }
+}

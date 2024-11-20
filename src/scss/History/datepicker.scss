@@ -1,0 +1,36 @@
+@import "../config";
+
+.date-picker-style{
+    display: flex;
+    flex-direction: column;
+    .date-picker-label{
+        font-size: 16px;
+        font-weight: 600px;
+    }
+    .date-picker{
+        border: 1px solid #dce0e8;
+        width: 250px;
+        height: 35px;
+    }
+}
+.select-search-container{
+    width: 250px;
+}
+
+
+.input-customer, .select-search-value{
+    border: 1px solid #dce0e8;
+    border-radius: 2px;
+    // width: 250px;
+    height: 35px;
+    .select-search-input {
+        font-size: 12px;
+        background-color: $secondary-color !important;
+        color: $primary-color;
+        width: 100% !important;
+        height: 36px !important;
+    }
+}
+.select-search-select{
+    z-index:100 !important
+}

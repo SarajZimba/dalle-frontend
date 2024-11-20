@@ -1,0 +1,214 @@
+@import "./config";
+.sidebar-container {
+  display: flex;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // height: 100%;
+  // border: 2px solid black;
+  // width: calc(100% - 260px);
+}
+.enter-bil-no {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bill-number {
+  border: 1px solid #ccc;
+  height: 32px;
+  width: 300px;
+  outline: none;
+}
+.bill-tables {
+  // border: 2px solid brown;
+  width: 100%;
+}
+
+.table-responsive-bill {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  height: 350px;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin: 30px 10px;
+
+  .table-bill {
+    width: 100%;
+    td,
+    tr,
+    th {
+      padding: 6px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.split-total-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.split-total-dropdown .split-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 190px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding-top: 1rem;
+}
+
+.split-total-dropdown .split-dropdown-content p {
+  padding: 0px 10px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.split-total-dropdown:hover .split-dropdown-content {
+  display: block;
+}
+
+.dine-tabs-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 1px;
+
+  .offcanvas-header {
+    background-color: $btn-seen;
+    height: 163px;
+  }
+  .dine-tabs-list {
+    margin: 30px 10px;
+    // width: 100%;
+
+    .hr-line {
+      border: 1px dotted black;
+      margin: 10px 20px;
+    }
+
+    .total-info {
+      padding: 10px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      label {
+        font-size: 20px;
+      }
+
+      span {
+        font-weight: 600;
+      }
+
+      .info {
+        padding: 10px 0px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.export {
+  background-color: $add-on;
+  border: 2px solid $secondary-color;
+  border-radius: 02px;
+  padding: 0 0.5rem;
+  height: 30px;
+  color: $secondary-color;
+}
+
+.checkbox {
+  margin-left: 5px;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 12px;
+}
+
+.show-pie-chart {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  .food-beverage-qty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.chart-table {
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .fix-width-contain {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.table-bill {
+  .detail-info {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+.group-table-width {
+  display: flex;
+  justify-content: space-around;
+  .food-column-group {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .date-picker-outlet-sm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .date-picker-outlet {
+    display: none !important;
+  }
+
+  .btn-side-info,
+  .btn-side {
+    width: 35px;
+    height: 35px;
+    top: 60%;
+
+    .icon-arrow {
+      width: calc(100% - 05px);
+      height: calc(100% - 10px);
+      color: $secondary-color;
+    }
+  }
+
+  .food-beverage-table,
+  .group-table-width {
+    display: flex;
+    flex-direction: column;
+    .food-column-group {
+      width: 100%;
+    }
+  }
+  .table-responsive-beverage {
+    width: 100% !important;
+  }
+}

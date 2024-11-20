@@ -1,0 +1,295 @@
+@import "../config";
+.same-customer-list{
+    margin: 20px 20px;
+}
+.select-style{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.position-sticky:focus, .position-sticky:visited, .position-sticky:focus-within{
+    background-color: $btn-seen;
+    color: $secondary-color;
+    // background-color: $modifications;
+    // background-color: $bg-light;
+}
+
+.credit-info {
+    margin: 20px 20px;
+    background-color: $bg-light;
+    border: 1px solid $btn-seen;
+    // width: calc(100% - 50px);
+    // box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+
+    .total-credit-sale,
+    .total-amount-paid,
+    .remaining-balance {
+        display: flex;
+        padding: 10px 0px;
+        // justify-content: space-around;
+    }
+
+    .credit-hr-line {
+        border-top: 1px solid $primary-color;
+        width: 100%;
+    }
+
+    .remaining-balance {
+        .specify-width {
+            width: 96%;
+        }
+    }
+
+    .specify-width {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        p {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+.handle-select-search-input {
+    padding: 10px 0px;
+    .handle-width {
+        display: flex;
+        justify-content: center;
+    }
+}
+.view {
+    // border: 2px solid $modifications;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    height: 30px;
+    background-color: $modifications;
+    color: $secondary-color;
+    
+    &:hover {
+        background-color: $secondary-color;
+        color: $modifications;
+    }
+}
+
+.btn-make-payment {
+    margin: 5px 10px;
+    display: flex;
+    justify-content: flex-end;
+    
+    .make-payment {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        height: 40px;
+        width: 150px;
+        border: 2px solid $success-color;
+        background-color: $bg-timesales;
+        &:hover {
+            background-color: $success-color;
+            color: $secondary-color;
+        }
+    }
+}
+
+
+.credit-table {
+    display: flex;
+
+    .total-credit-sale-table,
+    .total-amount-paid-table {
+        flex: 2;
+        margin: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+    .credit-table {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 580px) {
+    .handle-width {
+        flex-direction: column ;
+        align-items: center;
+        justify-content: center ;
+    }
+}
+
+.table-customer-list-responsive {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    
+    .table-customer-list {
+        font-family: 'Source Sans Pro';
+        margin: 15px 0px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+
+        td,
+        th {
+            padding: 4px;
+        }
+        
+        th {
+            height: 40px;
+        }
+
+        thead {
+            .position-sticky {
+                border-bottom: 1px solid $btn-seen;
+                position: sticky;
+                top: 0;
+                background-color: $secondary-color;
+                color: $primary-color;
+            }
+        }
+
+        tbody {
+            background-color: $secondary-color;
+        }
+    }
+}
+.table-credit-responsive {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    
+    .table-credit {
+        font-family: 'Source Sans Pro';
+        margin: 15px 0px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+
+        td,
+        th {
+            padding: 4px;
+        }
+        
+        th {
+            height: 40px;
+        }
+
+        thead {
+            .position-sticky {
+                border-bottom: 1px solid $btn-seen;
+                position: sticky;
+                top: 0;
+                background-color: $bg-light;
+                color: $primary-color;
+            }
+        }
+
+        tbody {
+            background-color: $bg-light;
+        }
+    }
+}
+.btn-left-credit {
+    margin: 5px 10px;
+    display: flex;
+    justify-content: flex-end;
+    
+    .left-credit {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        height: 40px;
+        width: auto;
+        padding: 0px 10px;
+        border: 2px solid $btn-search;
+        background-color: $btn-search-light;
+        // color: $secondary-color;
+        &:hover {
+            background-color: $btn-search;
+            color: $secondary-color;
+        }
+    }
+}
+.table-credit-left-responsive {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    
+    .table-credit-left {
+        font-family: 'Source Sans Pro';
+        margin: 15px 0px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #292929;
+        border-radius: 15px;
+        
+        td,
+        th {
+            border: 1px solid #292929;
+            padding: 4px;
+        }
+        
+        th {
+            height: 40px;
+        }
+
+        thead {
+            .position-sticky {
+                border-bottom: 1px solid $btn-seen;
+                position: sticky;
+                top: 0;
+                background-color:$btn-search;
+                color: $primary-color;
+            }
+        }
+
+        tbody {
+            background-color: $btn-search-light;
+        }
+    }
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+.no-wrap-bold {
+    white-space: nowrap;
+    font-weight: 600;
+}
+.amount-detail{
+    margin: 10px 0px;
+    label{
+        margin: 10px 0px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+.show-respond{
+    font-size: 20px;
+    text-align: center;
+}
+.error-color{
+    color: $danger-color;
+}
+.btn-save{
+    outline: 0;
+    border: 0;
+    background-color: $success-color !important;
+    color:$secondary-color
+}
+
+.left-credit{
+    margin: 20px;
+}
+.bg-credit {
+    background-color: rgb(238, 239, 243);
+    min-height: 85vh !important;
+}

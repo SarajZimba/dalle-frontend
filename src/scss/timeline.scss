@@ -1,0 +1,85 @@
+@import "./config";
+
+.filter-timeline {
+    border: 2px solid $btn-seen;
+    background-color: $bg-filter;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .start-date, .end-date {
+        margin-left: 7%;
+    }
+    .btn-search{
+        background-color: $btn-seen !important;
+    }
+}
+.bg-timeline {
+    background-color: rgb(238,239,243);
+    min-height: 80vh !important;
+}
+.timeline {
+    display: flex;
+    .left-timeline{
+        // width: 250px !important;
+        flex: 1;
+        height: auto;
+        margin: 0px 10px;
+        white-space: normal;
+    }
+    .right-timeline-table{
+        flex: 5;
+    }
+}
+@media screen and (max-width:880px){
+.timeline {
+    flex-direction: column;
+    .md-flex{
+        display: flex;
+        justify-content: space-evenly ;
+    }
+}
+}
+.hl-line{
+    width: 100%;
+    border-bottom: 2px solid $bg-course;
+}
+.total-sale-summary{
+    // background-color: $table-num;
+}
+.time-stats{
+    // background-color: $add-on;
+}
+.time-sales{
+    // background-color: $cook-process-hover;
+    margin: 10px 0px;
+    padding: 10px;
+    color: $primary-color;
+    .time-stamp{
+        padding: 10px 0px;
+        label{
+            padding: 5px 0px;
+            font-weight: 600;
+        }
+    }
+    .numbers{
+        span{
+            font-weight: 600; 
+        }
+    }
+}
+.total-sale-summary, .time-stats {
+    margin: 10px 0px;
+    padding: 10px;
+    color: $primary-color;
+    // color: $secondary-color;
+    span{
+        font-weight: 600; 
+    }
+}
+
+@media screen and (max-width:425px) {
+    .filter-timeline {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,10 @@
+@import "./config";
+
+.footer{
+    height: 50px;
+    background-color:$btn-seen;
+    color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

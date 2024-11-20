@@ -1,0 +1,308 @@
+@import './config';
+
+.top-icon {
+    text-align: end;
+}
+.select-search-select{
+    z-index:100 !important
+}
+
+//importatnt for live kitchen
+.input-outlet {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px 25px -50px;
+
+    .select-search-value {
+        width: 400px !important;
+        height: 40px;
+        border: 1px solid $primary-color;
+        border-radius: 05px;
+        background-color: $secondary-color !important;
+        color: $primary-color;
+        
+        .select-search-input {
+            background-color: $secondary-color !important;
+            color: $primary-color;
+            width: 400px !important;
+            height: 36px !important;
+        }
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .input-outlet {
+        margin: 25px 0px;
+
+        .select-search-value {
+            width: 250px !important;
+            height: 40px;
+            border: 1px solid $primary-color;
+            border-radius: 05px;
+            background-color: $secondary-color !important;
+            color: $primary-color;
+
+            .select-search-input {
+                background-color: $secondary-color !important;
+                color: $primary-color;
+                width: 100% !important;
+                height: 36px !important;
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .input-outlet {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .select-search-value {
+        margin-left: 0px;
+        background-color: $secondary-color !important;
+        color: $primary-color;
+        .select-search-input {
+            background-color: $secondary-color !important;
+            color: $primary-color;
+            width: 600px !important;
+            height: 36px !important;
+        }
+    }
+}
+.check-icon {
+    margin: 5px;
+    background-color: $secondary-color;
+    color: $success-color;
+    border: 1px solid $primary-color;
+    border-radius: 50%;
+    padding: 1px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: green;
+        color: $secondary-color;
+    }
+}
+
+.ticket {
+    background-color: $secondary-color;
+    // border: 1px solid $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+    margin: 10px;
+    height: auto;
+
+    .kot-id {
+        padding: 5px;
+    }
+
+    .item-order-type {
+        height: 70px;
+        background-color: $card-header;
+        color: $secondary-color;
+        display: flex;
+        justify-content: space-between;
+
+        .item-type {
+            margin-top: 9%;
+            margin-left: -40px;
+            text-align: center;
+            font-family: 'Source Serif Pro';
+            font-weight: 600;
+            font-size: 22px;
+        }
+    }
+
+    .item-course-detail {
+        .item-detail {
+            text-align: center;
+            background-color: rgb(199, 199, 199);
+            height: 180px;
+            color: $primary-color;
+            font-weight: 600;
+            font-family: 'Source Serif Pro';
+
+            .time-guests {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    padding: 2px 10px;
+                }
+            }
+
+            .show-elapsed-time {
+                display: flex;
+                justify-content: center;
+
+                span {
+                    padding: 0px 2px;
+                }
+            }
+        }
+
+        .course-item {
+            .course-type {
+                background-color: $bg-course;
+                color: $primary-color;
+                height: 35px;
+                font-size: 18px;
+                font-family: 'Source Serif Pro';
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .item-list {
+                background-color: $secondary-color;
+                color: $primary-color;
+                position: relative;
+                font-weight: 500;
+                height: auto;
+
+                .item-name {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    .quantity-box {
+                        padding: 0px 10px;
+                        margin: 0px 5px;
+                        max-width: 100px;
+                        height: 40px;
+
+                        span {
+                            padding: 5px;
+                            border: 1px solid $primary-color;
+                            max-width: 70%;
+                            max-height: 60%;
+                        }
+                    }
+
+                    .food {
+                        width: 600px;
+                    }
+
+                    .item-check-process {
+                        display: flex;
+                        // max-width: 90%;
+
+                        .completed-icon {
+                            color: $success-color;
+                            font-size: 24px;
+                            padding: 0px 5px;
+                            transition: transform .2s;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: $primary-color;
+                                transform: scale(1.5);
+                            }
+                        }
+
+                        .minus-icon {
+                            color: $btn-seen;
+                            font-size: 24px;
+                            padding: 0px 5px;
+                            cursor: pointer;
+                            transition: transform .2s;
+
+                            &:hover {
+                                transform: scale(1.5);
+                                color: $primary-color;
+                            }
+                        }
+
+                        .delete-icon {
+                            color: $danger-color;
+                            font-size: 24px;
+                            padding: 0px 5px;
+                            cursor: pointer;
+                            transition: transform .2s;
+
+                            &:hover {
+                                color: $primary-color;
+                                transform: scale(1.5);
+                            }
+                        }
+                    }
+                }
+
+                .modifications {
+                    color: $modifications;
+                    font-family: "Poppins";
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 0px 5px;
+                }
+
+                .allergies {
+                    padding: 0px 10px;
+
+                    span {
+                        font-weight: 500;
+                        font-family: 'Poppins';
+                        padding: 0px 5px;
+                        color: $danger-color;
+                    }
+                }
+
+                .add-ons {
+                    padding: 0px 10px;
+                    color: $add-on;
+                    font-family: "Poppins";
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .start-cooking {
+            background-color: $cook-process;
+            color: $cook-process-icon;
+            border-radius: 10px;
+            font-size: 30px;
+            border: 0;
+            margin: 5px;
+            width: 95%;
+            height: 40px;
+
+            &:hover {
+                background-color: $cook-process-hover;
+                color: $secondary-color;
+            }
+        }
+
+        .seen-btn {
+            background-color: $btn-seen;
+            color: $secondary-color;
+            border-radius: 10px;
+            width: 95%;
+            border: 0;
+            height: 35px;
+            margin: 5px;
+
+            &:hover {
+                background-color: #5c43e9;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) and (max-width:887px) {
+    .item-list {
+        height: 130px;
+    }
+}
+
+@media (min-width:760px) {
+    .item-type {
+        margin-top: 14% !important;
+        text-align: center;
+        font-weight: 300;
+        font-size: 20px !important;
+    }
+}
+
